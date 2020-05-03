@@ -11,13 +11,13 @@ $(document).ready(function () {
 
      console.log(time );
         var tr = $("<tr>");
-
+// 
         var tableTime = $("<td>")
             .addClass("hour")
             .text(time);
 
 console.log(tableTime)
-
+// makes td tag with insode textarea
         var tableEvent = $("<td>")
             .addClass("textarea");
 
@@ -33,6 +33,7 @@ console.log(tableTime)
         } else if (moment(time, "ha").isBefore(moment() )){
             currentTime = "past";
         }
+
         var areaText = $( "<textarea>")
         .addClass("description")
          .addClass(currentTime)
@@ -42,8 +43,9 @@ console.log(tableTime)
         tableEvent.append(areaText);
 
 console.log(areaText)
+// gives class css for save btn
         var tableSub = $("<td>").addClass("saveBtn");
-
+// font awseome sim card
         var simCard = $("<i>").addClass("fas fa-sim-card");
 
         tableSub.append(simCard);
@@ -51,10 +53,11 @@ console.log(areaText)
       tr.append(tableEvent);
            tr.append( tableSub);
 
-
+// appends tr to planschedule
         $("#planSchedule").append(tr);
 
     }
+    //will display hours
     function showBlock() {
         var planBlock = [];
 
